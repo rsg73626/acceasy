@@ -1,0 +1,44 @@
+
+form input[type=submit], form input[type=reset], form input[type=button] { 
+    border: none;
+}
+
+form .input-small {
+    height: var(--input-size-small);
+}
+
+form .input-medium {
+    height: var(--input-size-medium);
+}
+
+form .input-large {
+    height: var(--input-size-large);
+}
+
+form .input-extra-large {
+    height: var(--input-size-extra-large);
+}
+
+form .input-extra-extra-large {
+    height: var(--input-size-extra-extra-large);
+}
+
+form .option-small {
+    height: var(--option-size-small);
+}
+
+form .option-medium {
+    height: var(--option-size-medium);
+}
+
+form .option-large {
+    height: var(--option-size-large);
+}
+
+form .option-extra-large {
+    height: var(--option-size-extra-large);
+}
+
+form .option-extra-extra-large {
+    height: var(--option-size-extra-extra-large);
+}

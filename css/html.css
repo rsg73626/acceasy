@@ -1,0 +1,26 @@
+
+body {
+    font-family: 'arial';
+}
+
+h1 { font-size: 2em;  }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.67em; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+button { 
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-style: none;
+    height: var(--button-size-small);
+    text-align: center;
+}
+.button-small { height: var(--button-size-small); }
+.button-medium { height: var(--button-size-medium); }
+.button-large { height: var(--button-size-large); }
+.button-extra-large { height: var(--button-size-extra-large); }
+.button-extra-extra-large { height: var(--button-size-extra-extra-large); }

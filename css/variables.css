@@ -1,0 +1,46 @@
+html {
+
+    /* Theme */
+    
+    --menu-background-color: gray;
+    --menu-text-color: lightgray;
+    --menu-background-color-hover: lightgray;
+    --menu-text-color-hover: gray;
+    
+    --submenu-background-color: lightgray;
+    --submenu-text-color: gray;
+    --submenu-background-color-hover: gray;
+    --submenu-text-color-hover: lightgray;
+
+    /* Menu */
+
+    --menu-size-small: 35px;
+    --menu-size-medium: 44px;
+    --menu-size-large: 56px;
+    --menu-size-extra-large: 64px;
+    --menu-size-extra-extra-large: 128px;
+
+    /* Form */
+
+    --input-size-small: 20px;
+    --input-size-medium: 35px;
+    --input-size-large: 44px;
+    --input-size-extra-large: 56px;
+    --input-size-extra-extra-large: 64px;
+
+    --option-size-small: 20px;
+    --option-size-medium: 35px;
+    --option-size-large: 44px;
+    --option-size-extra-large: 56px;
+    --option-size-extra-extra-large: 64px;
+
+
+    /* Button */
+
+    --button-size-small: 20px;
+    --button-size-medium: 35px;
+    --button-size-large: 44px;
+    --button-size-extra-large: 56px;
+    --button-size-extra-extra-large: 64px;
+
+}
