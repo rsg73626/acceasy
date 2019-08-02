@@ -5,9 +5,9 @@
 
 /* Menu */
 
-@import "./menu/menu-common.css";
-@import "./menu/menu-top.css" (min-width: 801px);
-@import "./menu/menu-resp.css" (max-width: 800px);
+@import "./base/menu/menu-common.css";
+@import "./base/menu/menu-top.css" (min-width: 801px);
+@import "./base/menu/menu-resp.css" (max-width: 800px);
 
 /* Form */
 
