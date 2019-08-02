@@ -269,7 +269,8 @@ function _addOtherPropertiesToTag(tag, content) {
             property == 'grid' ||
             property == 'size' || 
             property == 'icon_side' ||
-            property == 'suboptions_icon') { continue }
+            property == 'suboptions_icon' ||
+            property == 'type') { continue }
         const value = content[property]
         if (isString(property)) {
             if (isString(value) || isNumber(value)) {

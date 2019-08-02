@@ -1,13 +1,13 @@
 
-@import "reset.css";
-@import "variables.css";
-@import "html.css";
+@import "./base/reset.css";
+@import "./base/variables.css";
+@import "./base/html.css";
 
 /* Menu */
 
-@import "./base/menu/menu-common.css";
-@import "./base/menu/menu-top.css" (min-width: 801px);
-@import "./base/menu/menu-resp.css" (max-width: 800px);
+@import "./menu/menu-common.css";
+@import "./menu/menu-top.css" (min-width: 801px);
+@import "./menu/menu-resp.css" (max-width: 800px);
 
 /* Form */
 
