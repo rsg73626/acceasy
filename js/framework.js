@@ -270,6 +270,7 @@ function _addOtherPropertiesToTag(tag, content) {
             property == 'size' || 
             property == 'icon_side' ||
             property == 'suboptions_icon' ||
+            property == 'content' ||
             property == 'type') { continue }
         const value = content[property]
         if (isString(property)) {
