@@ -49,3 +49,7 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
 * **```function p(content)```**
   - **content** pode ser uma string, um dos objetos que representam as tags ```<i>```, ```<span>```, ```<a>```, ```<abbr>```, ```<acronym>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriomente).
+
+* **```function i(text, clss)```**
+  - **text** deve ser uma string e será inserido como conteúdo da tag ```<i>``` criada. 
+  - **clss** deve ser uma string e será usado como valor da propriedade **class** da tag ```<i>``` criada. 
