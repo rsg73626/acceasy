@@ -64,3 +64,6 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 * **```function h(text, level)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<h>``` criada. 
   - **level** deve ser um inteiro entre 1 e 6 e é utilizado para definir qual tag será criada (```<h1>```, ```<h2>```, ```<h3>```, ```<h4>```, ```<h5```, ```<h6>```). É opcional. Caso seja omitido ou caso seja menor que 1 ou maior que 6 é cirado uma tag ```<h1>```. 
+
+* **```function hgroup(content)```***
+  - **content** pode ser uma string, um dos objetos que representam uma das tags ```<h>``` ou uma array contendo strings e objetos. As strings são transformadas em tags ```<h1>```. Todas as tags criadas são inseridas como conteúdo da tag ```<hgrou>``` criada. 
