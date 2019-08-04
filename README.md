@@ -2,6 +2,10 @@
 
 Framework JavaScript para criação de páginas web responsivas com acessibilidade para deficientes visuais.
 
+## Indice
+
+1. [Como usar?](#como-usar)
+
 ## Como usar? 
 
 Para utilizar o framework siga os seguintes passos: 
