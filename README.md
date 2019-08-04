@@ -126,4 +126,12 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
   - **label** deve ser uma string e caso seja passado: é criado uma tag ```<label>``` e uma tag ```<span>```; o valor do parâmetro é adicionado como conteúdo da tag ```<span>``` criada; a tag ```<span>``` é inserida como conteúdo da tag ```<label>``` criada; e a tag ```<input>``` criada também é adicionada como conteúdo da tag ```<label>```. Pode ser omitido ou passada como **null**.
   - **placeholder** deve ser uma string e seu valor á utilizado como valor da propriedade **placeholder** da tag ```<input>``` criada. Pode ser omitido ou passado como **null**.
   - **required** deve ser um booleano e seu valor é utilizado como valor da propriedade **required** da tag ```<input>``` criada. Pode ser omitido.
-  - O framework também disponibiliza as funções globais **```function textInput(name, label, placeholder, required)```**, **```function numberInput(name, label, placeholder, required)```**, **```function telInput(name, label, placeholder, required)```**, **```function emailInput(name, label, placeholder, required)```**, **```function dateInput(name, label, placeholder, required)```**, **```function passwordInput(name, label, placeholder, required)```** e **```function fileInput(name, label, placeholder, required)```**, que servem para simplificar a criação desse tipos de input e funcionam exatamente como a função **```function input(type, name, label, placeholder, required)```**, somente não é necessário passar o parâmetro **type**. 
+  - O framework também disponibiliza as funções globais: 
+    - **```function textInput(name, label, placeholder, required)```**
+    - **```function numberInput(name, label, placeholder, required)```**
+    - **```function telInput(name, label, placeholder, required)```** 
+    - **```function emailInput(name, label, placeholder, required)```**
+    - **```function dateInput(name, label, placeholder, required)```**
+    - **```function passwordInput(name, label, placeholder, required)```**
+    - **```function fileInput(name, label, placeholder, required)```**
+  Elas servem para simplificar a criação desse tipos de input e funcionam exatamente como a função **```function input(type, name, label, placeholder, required)```**, somente não é necessário passar o parâmetro **type**. 
