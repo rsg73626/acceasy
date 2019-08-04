@@ -16,6 +16,8 @@ Para utilizar o framework siga os seguintes passos:
    * **```getMainObjects```**: essa função deve retornar os objetos que serão transformados nas tags HTML que vc quer que sejam inseridas na tag [\<main\>](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/main), dentro do body da sua página. Não recebe nenhum parâmetro e deve retornar uma lista de objetos. Caso a função não tenha sido implementada ou retorno uma lista vazia, a tag ```<main>``` não é criada. 
    * **```getFooterObjects```**: essa função deve retornar os objetos que serão transformados nas tags HTML que vc quer que sejam inseridas na tag [\<footer\>](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/footer), dentro do body da sua página. Não recebe nenhum parâmetro e deve retornar uma lista de objetos. Caso a função não tenha sido implementada ou retorno uma lista vazia, a tag ```<footer>``` não é criada. 
    * **```didEndSetup```**: essa função será chamada pelo framework assim que terminar de processar os objetos que foram retornados nas três funções anteriores. Não recebe nenhum parâmetro e não possui retorno. Use-a para executar qualquer ação que desejar nesse momoento. **Implementação opcional**.
+
+### Template
    
 Este projeto possui um arquivo de **template**, no qual todos os passos acima já estão implementados, e partir do qual é possível criar as páginas desejadas.
     
@@ -87,3 +89,12 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
   - **subcontent** deve ser um dos objetos que representam as tags ```<ul>```, ```<ol>```. Utilizado para criar listas encadeadas. A tag criada é inserida como conteúdo da tag ```<li>```criada. Pode ser omitido caso não se queira criar uma lista encadeada. 
 
 * **```function figure(img, caption)```**
+  - **img** deve ser um objeto que representa a tag ```<img>```. A tag criada é inserida como conteúdo da tag ```<figure>``` criada. 
+  - **caption** pode ser uma string ou um objeto que representa a tag ```<figcaption>```. Em caso de ser uma string, seu valor é inserido como conteúdo de uma tag ```<figcaption>```, que por sua vez é inserida como conteúdo da tag ```<figure>``` criada. Em caso de ser um objeto, a tag ```<figcaption>``` criada é inserida como conteúdo da tag ```<figure>``` criada. Pode ser omitido. 
+
+* **```function img(src, alt)```**
+  - **src** deve ser uma string e seu valor é utilizado como valor da propriedade **src** da tag ```<img>``` criada. 
+  - **alt** deve ser uma string e seu valor é utilizado como valor da propriedade **alt** da tag ```<img>``` criada. 
+
+* **```function figcaption(text)```**
+ - 
