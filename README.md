@@ -6,8 +6,9 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
 
 1. [Como usar?](#como-usar)
    - [Template](#template)
-2. [Como criar os objetos que serão transformados nas tags?](#como-criar-os-objetos-que-serao-transformados-nas-tags)
-3. [Funções para criar os objetos que representam as tags](funcoes-para-criar-os-objetos-que-representam-as-tags)
+2. [Como criar os objetos que serão transformados nas tags?](#como-criar-os-objetos-que-serão-transformados-nas-tags)
+3. [Funções para criar os objetos que representam as tags](#funções-para-criar-os-objetos-que-representam-as-tags)
+4. [Os casos select, checkbox e radio](#os-casos-select-checkbox-e-radio)
 
 ## Como usar? 
 
