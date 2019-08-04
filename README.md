@@ -101,3 +101,15 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
 * **```function breakline()```**
   - Essa função não recebe argumento e retorno um bojeto que representa a tag ```<br>```. Também existe uma variável global no framework chamada **br** que já armazena um bojeto desse tipo. 
+
+* **```function section(content)```**
+  - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<br>```, ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```, ```<ul>```,  ```<ol>```, ```<figure>```, ```<img>```, ```<article>```, ```<nav>```, ```<aside>```, ```<form>```, ```<button>```. As tags criadas são inseridas como conteúdo da tag ```<section>```. 
+
+* **```function article(content)```**
+  - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<br>```, ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```, ```<ul>```,  ```<ol>```, ```<figure>```, ```<img>```, ```<article>```, ```<nav>```, ```<aside>```, ```<form>```, ```<button>```. As tags criadas são inseridas como conteúdo da tag ```<article>``` criada. 
+
+* **```function nav(content)```**
+  - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<a>```, ```<ul>```, ```<ol>```. As tags criadas são inseridas como conteúdo como conteúdo da tag ```<nav>``` criada. 
+
+* **```function aside(content)```**
+  - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<a>```, ```<ul>```, ```<ol>```. As tags criadas são inseridas como conteúdo como conteúdo da tag ```<aside>``` criada.  
