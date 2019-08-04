@@ -134,5 +134,4 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
     - **```function dateInput(name, label, placeholder, required)```**
     - **```function passwordInput(name, label, placeholder, required)```**
     - **```function fileInput(name, label, placeholder, required)```**
-  
    Elas servem para simplificar a criação desse tipos de input e funcionam exatamente como a função **```function input(type, name, label, placeholder, required)```**, somente não é necessário passar o parâmetro **type**. 
