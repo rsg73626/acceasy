@@ -1,5 +1,5 @@
 
-function didStartSetUp() {
+function didStartSetup() {
     /* 
     Replace this implementation for any action you want to perform 
     before the framework execution.
@@ -22,7 +22,7 @@ function getFooterObjects() {
     return [h('This is the <footer>')]
 }
 
-function didFinishSetUp() {
+function didEndSetup() {
  /* 
     Replace this implementation for any action you want to perform 
     after the framework finished running.

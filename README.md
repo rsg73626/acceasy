@@ -21,4 +21,26 @@ Este projeto possui um arquivo de **template**, no qual todos os passos acima j�
     
 ## Como criar os objetos que serão transformados nas tags? 
 
-Cada tag 
+Cada tag é representada por um objeto JavaScript que possui a estrutura base: 
+
+```
+{
+    type: ...,
+    content: ...
+}
+```
+
+- **type** é fum valor inteiro e diz qual tag deve ser criada.
+- **content** pode ser uma string, um array ou outro objeto. Seu conteúdo varia de acordo com o valor de **type** e ele deve possuir o que é necessário para se criar a tag desejada. 
+
+Atualmente o framework dá suport à criação das seguintes tags: ```<p>```, ```<i>```, ```<a>```, ```<span>```, ```<h>```, ```<hgroup>```, ```<abbr>```, ```<acronym>```, ```<ul>```, ```<ol>```, ```<li>```, ```<figure>```, ```<img>```, ```<figcaption>```, ```<br>```, ```<section>```, ```<article>```, ```<nav>```, ```<aside>```, ```<form>```, ```<input>```, ```<button>``` e ```<select>```. 
+
+Também há um componenete personalizado para a criação de menu de navegação. 
+
+Não é necessário criar a estrutura dos objetos manualmente. Para isso, o framework disponibiliza uma série de funções auxiliares que criar os objetos, diminuindo e facilitando o trabalho.
+
+Cada função possui o nome da tag que se deseja criar, e dependendo de qual tag for, a função recebe diferente parâmetros, alguns obrigatório e outros opcionais. 
+
+Veja as funções auxiliares a seguir. 
+
+## Funções auxiliares
