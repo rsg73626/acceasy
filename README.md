@@ -98,3 +98,6 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
 * **```function figcaption(text)```**
   - **text** deve ser uma string e seu valor inserido com conteúdo da tag ```<figcaption>``` criada. 
+
+* **```function breakline()```**
+  - Essa função não recebe argumento e retorno um bojeto que representa a tag ```<br>```. Também existe uma variável global no framework chamada **br** que já armazena um bojeto desse tipo. 
