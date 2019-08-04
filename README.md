@@ -97,4 +97,4 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
   - **alt** deve ser uma string e seu valor é utilizado como valor da propriedade **alt** da tag ```<img>``` criada. 
 
 * **```function figcaption(text)```**
- - 
+  - **text** deve ser uma string e seu valor inserido com conteúdo da tag ```<figcaption>``` criada. 
