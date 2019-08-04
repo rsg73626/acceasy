@@ -121,7 +121,7 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
   - ***enctype** deve ser uma string e seu valor é utilizado como valor da propriedade **enctype** da tag ```<form>``` criada. Pode ser omitido. 
 
 * **```function input(type, name, label, placeholder, required)```**
-  - **type** deve ser uma string e seu valor é utilizado como valor da propriedade **type** da tag ```<input>``` criada. O framework disponibiliza as váriaveis globais ```_text```, ```_number```, ```_tel```, ```_email```, ```_date```, ```_submit```, ```_reset```, ```_password```, ```_file```, que podem ser utilizadas como valores. 
+  - **type** deve ser uma string e seu valor é utilizado como valor da propriedade **type** da tag ```<input>``` criada. O framework disponibiliza as váriaveis globais ```_text```, ```_number```, ```_tel```, ```_email```, ```_date```, ```_password```, ```_file```, que podem ser utilizadas como valores. 
   - **name** deve ser uma string e seu valor é utilizado como valor da propriedade **name** da tag ```<input>``` criada. 
   - **label** deve ser uma string e caso seja passado: é criado uma tag ```<label>``` e uma tag ```<span>```; o valor do parâmetro é adicionado como conteúdo da tag ```<span>``` criada; a tag ```<span>``` é inserida como conteúdo da tag ```<label>``` criada; e a tag ```<input>``` criada também é adicionada como conteúdo da tag ```<label>```. Pode ser omitido ou passada como **null**.
   - **placeholder** deve ser uma string e seu valor á utilizado como valor da propriedade **placeholder** da tag ```<input>``` criada. Pode ser omitido ou passado como **null**.
@@ -134,4 +134,11 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
     - **```function dateInput(name, label, placeholder, required)```**
     - **```function passwordInput(name, label, placeholder, required)```**
     - **```function fileInput(name, label, placeholder, required)```**
+
    Elas servem para simplificar a criação desse tipos de input e funcionam exatamente como a função **```function input(type, name, label, placeholder, required)```**, somente não é necessário passar o parâmetro **type**. 
+
+* **```function submit(text)```**
+  - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="submit">``` criada. Pode ser omitido. Seu valor padrão é **"Submit"**
+
+* **```function reset(text)```**
+  - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="reset">``` criada. Pode ser omitido. Seu valor padrão é **"Reset"**
