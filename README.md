@@ -59,11 +59,31 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
 * **```function a(text, link)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<a>```criada. 
-  - **link** deve ser uma string e será utlizado como valor da propriedade **href** da tag ```<a>```criada. 
+  - **link** deve ser uma string e será utilizado como valor da propriedade **href** da tag ```<a>```criada. 
 
 * **```function h(text, level)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<h>``` criada. 
   - **level** deve ser um inteiro entre 1 e 6 e é utilizado para definir qual tag será criada (```<h1>```, ```<h2>```, ```<h3>```, ```<h4>```, ```<h5```, ```<h6>```). É opcional. Caso seja omitido ou caso seja menor que 1 ou maior que 6 é cirado uma tag ```<h1>```. 
 
-* **```function hgroup(content)```***
-  - **content** pode ser uma string, um dos objetos que representam uma das tags ```<h>``` ou uma array contendo strings e objetos. As strings são transformadas em tags ```<h1>```. Todas as tags criadas são inseridas como conteúdo da tag ```<hgrou>``` criada. 
+* **```function hgroup(content)```**
+  - **content** pode ser uma string, um dos objetos que representam uma das tags ```<h>``` ou uma array contendo strings e objetos. As strings são transformadas em tags ```<h1>```. Todas as tags criadas são inseridas como conteúdo da tag ```<hgroup>``` criada. 
+
+* **```function abbr(text, title)```**
+  - **text** deve ser uma string e será inserido como conteúdo da tag ```<abbr>``` criada. 
+  - **title** deve ser uma string e seru valor será utilizado como valor da propriedade **title** da tag ```<abbr>``` cirada. 
+
+* **```function acronym(text, title)```**
+  - **text** deve ser uma string e será inserido como conteúdo da tag ```<acronym>``` criada. 
+  - **title** deve ser uma string e seru valor será utilizado como valor da propriedade **title** da tag ```<acronym>``` cirada. 
+
+* **```function ul(content)```**
+  - **content** pode ser uma string, um dos objetos que representam as tags ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```,```<img>```,  ```<figure>```, ```<li>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriormente). Os textos e tags criada (se for o caso) são inseridos como conteúdo de uma tag ```<li>```, que por sua vez é inserida como ocnteúdo da tag ```<ul>``` criada. 
+
+* **```function ol(content)```**
+  - **content** pode ser uma string, um dos objetos que representam as tags ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```,```<img>```,  ```<figure>```, ```<li>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriormente). Os textos e tags criada (se for o caso) são inseridos como conteúdo de uma tag ```<li>```, que por sua vez é inserida como ocnteúdo da tag ```<ol>``` criada. 
+
+* **```function li(content, subcontent)```**
+  - **content** pode ser uma string, um dos objetos que representam as tags ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```,```<img>```,  ```<figure>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriormente). Os textos e tagas criadas (se for o caso) são inseridos como conteúdo das tag ```<li>``` criada. Pode ser passado como **null** caso o valor do segundo parâmetro seja específicado. 
+  - **subcontent** deve ser um dos objetos que representam as tags ```<ul>```, ```<ol>```. Utilizado para criar listas encadeadas. A tag criada é inserida como conteúdo da tag ```<li>```criada. Pode ser omitido caso não se queira criar uma lista encadeada. 
+
+* **```function figure(img, caption)```**
