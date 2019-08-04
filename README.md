@@ -30,7 +30,7 @@ Cada tag é representada por um objeto JavaScript que possui a estrutura base:
 }
 ```
 
-- **type** é fum valor inteiro e diz qual tag deve ser criada.
+- **type** é um valor inteiro e diz qual tag deve ser criada.
 - **content** pode ser uma string, um array ou outro objeto. Seu conteúdo varia de acordo com o valor de **type** e ele deve possuir o que é necessário para se criar a tag desejada. 
 
 Atualmente o framework dá suport à criação das seguintes tags: ```<p>```, ```<i>```, ```<a>```, ```<span>```, ```<h>```, ```<hgroup>```, ```<abbr>```, ```<acronym>```, ```<ul>```, ```<ol>```, ```<li>```, ```<figure>```, ```<img>```, ```<figcaption>```, ```<br>```, ```<section>```, ```<article>```, ```<nav>```, ```<aside>```, ```<form>```, ```<input>```, ```<button>``` e ```<select>```. 
@@ -44,3 +44,8 @@ Cada função possui o nome da tag que se deseja criar, e dependendo de qual tag
 Veja as funções auxiliares a seguir. 
 
 ## Funções auxiliares
+
+A seguir serão mostradas as assinaturas das funções auxiliares e uma explicação sobre os parâmetros recebidas por cada uma. 
+
+* **```p(content)```**
+  - **content** pode ser uma string, um dos objetos que representam as tags ```<i>```, ```<span>```, ```<a>```, ```<abbr>```, ```<acronym>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriomente).
