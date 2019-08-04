@@ -5,6 +5,9 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
 ## Indice
 
 1. [Como usar?](#como-usar)
+   - [Template](#template)
+2. [Como criar os objetos que serão transformados nas tags?](#como-criar-os-objetos-que-serao-transformados-nas-tags)
+3. [Funções para criar os objetos que representam as tags](funcoes-para-criar-os-objetos-que-representam-as-tags)
 
 ## Como usar? 
 
@@ -49,7 +52,7 @@ Cada função possui o nome da tag que se deseja criar, e dependendo de qual tag
 
 Veja as funções auxiliares a seguir. 
 
-## Funções auxiliares
+## Funções para criar os objetos que representam as tags
 
 A seguir serão mostradas as assinaturas das funções auxiliares e uma explicação sobre os parâmetros recebidas por cada uma. 
 
