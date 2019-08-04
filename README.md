@@ -138,7 +138,14 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
    Elas servem para simplificar a criação desse tipos de input e funcionam exatamente como a função **```function input(type, name, label, placeholder, required)```**, somente não é necessário passar o parâmetro **type**. 
 
 * **```function submit(text)```**
-  - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="submit">``` criada. Pode ser omitido. Seu valor padrão é **"Submit"**
+  - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="submit">``` criada. Pode ser omitido. Seu valor padrão é **"Submit"**.
 
 * **```function reset(text)```**
-  - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="reset">``` criada. Pode ser omitido. Seu valor padrão é **"Reset"**
+  - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="reset">``` criada. Pode ser omitido. Seu valor padrão é **"Reset"**.
+
+* **```button(text, onclick)```**
+  - **text** deve ser uma string e seu valor é inserido como conteúdo da tag ```<button>``` criada.
+  - **onclick** deve ser uma string e seu valor é utilizado como valor da propriedade **onclick** da tag ```<button>``` criada. 
+
+## Os casos select, checkbox e radio
+
