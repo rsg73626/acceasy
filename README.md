@@ -26,15 +26,17 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
    - [\<section\>](#section-func)
    - [\<article\>](#article-func)
    - [\<nav\>](#nav-func)
-   - [\<aside\>](#-func)
+   - [\<aside\>](#aside-func)
    - [\<form\>](#form-func)
    - [\<input\>](#input-func)
    - [iput submit](#submit-func)
    - [input reset](#reset-func)
    - [\<button\>](#button-func)
-   <!-- - [\<\>](#-func)
-   - [\<\>](#-func) -->
+   <!-- - [\<\>](#-func) -->
 4. [Os casos select, checkbox e radio](#os-casos-select-checkbox-e-radio)
+   - [Select](#select)
+     - [\<select\>](#select-func)
+     - [\<option\>](#option-func)
 
 ## Como usar? 
 
@@ -225,9 +227,29 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
 <div id="button-func"></div>
 
-* **```button(text, onclick)```**
+* **```function button(text, onclick)```**
   - **text** deve ser uma string e seu valor é inserido como conteúdo da tag ```<button>``` criada.
   - **onclick** deve ser uma string e seu valor é utilizado como valor da propriedade **onclick** da tag ```<button>``` criada. 
 
 ## Os casos select, checkbox e radio
 
+A tag ```<select>```, e os inputs dos tipos **checkbox** e **radio** apresentam grupo de opções para que os usuário possa selecionar. No framewok essas tags possuem duas funções cada uma para a criação do que se deseja. 
+
+###Select
+
+<div id="select-func"></div>
+
+* **```function select(name, options, label, required)```**
+  - **name** deve ser uma string e seu valor é utilizado como valor da propriedade **name** da tag ```<select>``` criada.
+  - **options** pode ser um objeto ou uma lista de objetos do tipo que representa a tag ```<otpion>```.
+  - **label** deve ser uma string e caso seja passado: é criado uma tag ```<label>``` e uma tag ```<span>```; o valor do parâmetro é adicionado como conteúdo da tag ```<span>``` criada; a tag ```<span>``` é inserida como conteúdo da tag ```<label>``` criada; e a tag ```<select>``` criada também é adicionada como conteúdo da tag ```<label>```. Pode ser omitido ou passada como **null**.
+  - **required** deve ser um booleano e seu valor é utilizado como valor da propriedade **required** da tag ```<select>``` criada. Pode ser omitido.
+
+<div id="options-func"></div>
+
+* **```function option(text, value, selected)```**
+  - **text** deve ser uma string e seu valor é inserido como conteúdo da tag ```<option>``` criada. 
+  - **value** pode ser uma string ou número e seu valor é utilizado como valor da propriedade **value** da tag ```<option>``` criada. 
+  - **selected** deve ser um booleano e seu valor é utilizado como valor da propriedade **selected** da tag ```<option>``` criada. Pode ser omitida. 
+
+Os objetos criados por essa função somente serão utilizados para a passagem do parâmetro **options** da função anterior que cria a tag ```<select>```. Esse objeto também pode ser substituído por um array que deve conter no mínimo dois e no máximo três valores, que devem obedecer as mesmas regras dos parâmetros da função (com relação a ordem, tipo e obrigatoriedade). 
