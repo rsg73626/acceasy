@@ -235,7 +235,7 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
 A tag ```<select>```, e os inputs dos tipos **checkbox** e **radio** apresentam grupo de opções para que os usuário possa selecionar. No framewok essas tags possuem duas funções cada uma para a criação do que se deseja. 
 
-###Select
+### Select
 
 <div id="select-func"></div>
 
