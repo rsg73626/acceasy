@@ -8,6 +8,7 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
    - [Template](#template)
 2. [Como criar os objetos que serão transformados nas tags?](#como-criar-os-objetos-que-serão-transformados-nas-tags)
 3. [Funções para criar os objetos que representam as tags](#funções-para-criar-os-objetos-que-representam-as-tags)
+   - [p](#p-func)
 4. [Os casos select, checkbox e radio](#os-casos-select-checkbox-e-radio)
 
 ## Como usar? 
@@ -57,7 +58,7 @@ Veja as funções auxiliares a seguir.
 
 A seguir serão mostradas as assinaturas das funções auxiliares e uma explicação sobre os parâmetros recebidas por cada uma. 
 
-* (**```function p(content)```**){#p-func}
+* (**```function p(content)```**) <div id="p-func"></div>
   - **content** pode ser uma string, um dos objetos que representam as tags ```<i>```, ```<span>```, ```<a>```, ```<abbr>```, ```<acronym>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriomente).Os textos e tags criadas (se for o caso) são inseridos como conteúdo da tag ```<p>``` criada.
 
 * **```function i(text, clss)```**
