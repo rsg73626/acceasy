@@ -332,3 +332,7 @@ O presente framework foi desenvolvido pensando em disponnibilizar páginas web a
 1. As tags semânticas do HTML5 são utilizadas sempre que possível, sendo raro a utilização da tag ```<div>```. 
 
 2. O componente ```menu``` possui acessibilidade para navegação com uso de teclado de acordo com especícações do padrão WAI-ARIA criado pela W3C. Além disso, o mesmo componente também faz utilização de outras propriedade do WAI-ARIA, como por exemplo a propriedade ```expanded``` que possibilita para os leitores de tela identificar se uma opção que possui sub items está exibindo as sub opções disponíveis (o que signficaria dizer para um usuário que não utiliza o leitor de tela que o menu está aberto ou fechado). 
+
+## Notas
+
+O framework ainda está em fase de teste e desenvolvimento, por isso, erros podem ocorrer. Além disso ainda há muito trabalho para ser feito, tanto com relação ao suporte as tags HTML existente quanto ao suporte a acessibilidade. 
