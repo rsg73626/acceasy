@@ -291,6 +291,14 @@ Os objetos criados por essa função somente serão utilizados para a passagem d
   - **text** deve ser uma string. Os seguintes passos são executados: cria-se uma tag ```<span>```; adiciona-se o valor do parâmetro como conteúdo da tag ```<span>``` criada; criate-se a tag ```<input type="radio">```; cria-se uma tag ```<label>```; adiciona-se as tags ```<input type="radio">```e ```<span>``` (nessa ordem) como conteúdos da tag ```<label>```.
   - **value** pode ser uma string ou número e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="radio">``` criada.
   - **id** deve ser uma string e seu valor é utilizado como valor da propriedade **id** da tag ```<input type="radio">``` e como valor da propriedade **for** da tag ```<label>``` criada.
-  - **checked** deve ser um booleano e seu valor é utilizado como valor da propriedade **checked** da tag ```<input type="checkbox">``` criada. Pode ser omitida ou passada como **null**.
+  - **checked** deve ser um booleano e seu valor é utilizado como valor da propriedade **checked** da tag ```<input type="checkbox">``` criada. Pode ser omitida.
 
 Os objetos criados por essa função somente serão utilizados para a passagem do parâmetro **options** da função anterior. Esse objeto também pode ser substituído por um array que deve conter no mínimo três e no máximo quatro valores, que devem obedecer as mesmas regras dos parâmetros da função (com relação a ordem, tipo e obrigatoriedade). 
+
+## Menu
+
+O framework também disponibiliza uma função que retorna um objeto para a criação de um menu de navegação. 
+
+### ```function menu(items) ou mn(items)```
+
+A função 
