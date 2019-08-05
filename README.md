@@ -40,6 +40,9 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
    - [Checkbox](#checkbox)
      - [checkboxGroup](#checkboxGroup-func)
      - [\<input type="checkbox"\>](#checkbox-func)
+   - [Radio](#radio)
+     - [radioGroup](#radioGroup-func)
+     - [\<input type="radio"\>](#radio-func)
 
 ## Como usar? 
 
