@@ -305,7 +305,7 @@ A função ```mn``` é uma maneira mais prática de se criar o bojeto que presen
 
 * **items** pode ser um objeto ou um array de objetos do tipo item de menu. 
 
-### ```function menuItem(text, link, icon, subitems) ou mi(text, link, icon, subitems)
+### ```function menuItem(text, link, icon, subitems)``` ou ```mi(text, link, icon, subitems)```
 
 A função ```mi``` é uma maneira mais prática de se criar o objeto que representa um item de menu, mas sua impelmentação é exatamente a mesma da função ```menuItem```. 
 
@@ -316,3 +316,5 @@ A função ```mi``` é uma maneira mais prática de se criar o objeto que repres
 * **icon** deve ser uma string e é usado para adicionar um ícone ao lado do nome da opção de menu correspondente. Pode ser omitido ou passado como **null**.
 
 * **subitems** deve ser uma lista de objetos do tipo item de menu que serão utilizados como sub opções da opção de menu correspondente. 
+
+Para ver a estrutura das tags criadas execute o exemplo presente no repositório. 
