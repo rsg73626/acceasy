@@ -8,7 +8,14 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
    - [Template](#template)
 2. [Como criar os objetos que serão transformados nas tags?](#como-criar-os-objetos-que-serão-transformados-nas-tags)
 3. [Funções para criar os objetos que representam as tags](#funções-para-criar-os-objetos-que-representam-as-tags)
-   - [p](#p-func)
+   - [<p>](#p-func)
+   - [<i>](#i-func)
+   - [<span>](#span-func)
+   - [<a>](#a-func)
+   - [<h>](#h-func)
+   - [<hgroup>](#hgroup-func)
+   - [<abbr>](#abbr-func)
+   - [<acronym>](#acronym-func)
 4. [Os casos select, checkbox e radio](#os-casos-select-checkbox-e-radio)
 
 ## Como usar? 
@@ -63,27 +70,41 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 * **```function p(content)```**
   - **content** pode ser uma string, um dos objetos que representam as tags ```<i>```, ```<span>```, ```<a>```, ```<abbr>```, ```<acronym>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriomente).Os textos e tags criadas (se for o caso) são inseridos como conteúdo da tag ```<p>``` criada.
 
+<div id="i-func"></div>
+
 * **```function i(text, clss)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<i>``` criada. 
-  - **clss** deve ser uma string e será usado como valor da propriedade **class** da tag ```<i>``` criada. 
+  - **clss** deve ser uma string e será usado como valor da propriedade **class** da tag ```<i>``` criada.
+
+<div id="span-func"></div> 
 
 * **```function span(text)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<span>``` criada. 
+
+<div id="a-func"></div>
 
 * **```function a(text, link)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<a>```criada. 
   - **link** deve ser uma string e será utilizado como valor da propriedade **href** da tag ```<a>```criada. 
 
+<div id="h-func"></div>
+
 * **```function h(text, level)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<h>``` criada. 
   - **level** deve ser um inteiro entre 1 e 6 e é utilizado para definir qual tag será criada (```<h1>```, ```<h2>```, ```<h3>```, ```<h4>```, ```<h5```, ```<h6>```). É opcional. Caso seja omitido ou caso seja menor que 1 ou maior que 6 é cirado uma tag ```<h1>```. 
 
+<div id="hgroup-func"></div>
+
 * **```function hgroup(content)```**
   - **content** pode ser uma string, um dos objetos que representam uma das tags ```<h>``` ou uma array contendo strings e objetos. As strings são transformadas em tags ```<h1>```. Todas as tags criadas são inseridas como conteúdo da tag ```<hgroup>``` criada. 
+
+<div id="abbr-func"></div>
 
 * **```function abbr(text, title)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<abbr>``` criada. 
   - **title** deve ser uma string e seru valor será utilizado como valor da propriedade **title** da tag ```<abbr>``` cirada. 
+
+<div id="acronym-func"></div>
 
 * **```function acronym(text, title)```**
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<acronym>``` criada. 
