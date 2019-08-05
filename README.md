@@ -46,7 +46,8 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
 5. [Menu](#menu)
    - [function menu(items) ou mn(items)](#function-menuitems-ou-mnitems)
    - [function menuItem(text, link, icon, subitems) ou mi(text, link, icon, subitems)](#function-menuitemtext-link-icon-subitems-ou-mitext-link-icon-subitems)
-6. [Acessbilidade](acessibilidade)
+6. [Acessbilidade](#acessibilidade)
+6. [Notas](#notas)
 
 ## Como usar? 
 
