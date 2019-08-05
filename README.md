@@ -37,6 +37,9 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
    - [Select](#select)
      - [\<select\>](#select-func)
      - [\<option\>](#option-func)
+   - [Checkbox](#checkbox)
+     - [checkboxGroup](#checkboxGroup-func)
+     - [\<input type="checkbox"\>](#checkbox-func)
 
 ## Como usar? 
 
@@ -245,7 +248,7 @@ A tag ```<select>```, e os inputs dos tipos **checkbox** e **radio** apresentam 
   - **label** deve ser uma string e caso seja passado: é criado uma tag ```<label>``` e uma tag ```<span>```; o valor do parâmetro é adicionado como conteúdo da tag ```<span>``` criada; a tag ```<span>``` é inserida como conteúdo da tag ```<label>``` criada; e a tag ```<select>``` criada também é adicionada como conteúdo da tag ```<label>```. Pode ser omitido ou passada como **null**.
   - **required** deve ser um booleano e seu valor é utilizado como valor da propriedade **required** da tag ```<select>``` criada. Pode ser omitido.
 
-<div id="options-func"></div>
+<div id="option-func"></div>
 
 * **```function option(text, value, selected)```**
   - **text** deve ser uma string e seu valor é inserido como conteúdo da tag ```<option>``` criada. 
@@ -253,3 +256,20 @@ A tag ```<select>```, e os inputs dos tipos **checkbox** e **radio** apresentam 
   - **selected** deve ser um booleano e seu valor é utilizado como valor da propriedade **selected** da tag ```<option>``` criada. Pode ser omitida. 
 
 Os objetos criados por essa função somente serão utilizados para a passagem do parâmetro **options** da função anterior que cria a tag ```<select>```. Esse objeto também pode ser substituído por um array que deve conter no mínimo dois e no máximo três valores, que devem obedecer as mesmas regras dos parâmetros da função (com relação a ordem, tipo e obrigatoriedade). 
+
+### Checkbox
+
+<div id="checkboxGroup-func"></div>
+
+* **```function checkboxGroup(options)```**
+  - **options** pode ser um objeto ou uma lista de objetos do tipo que representa a tag ```<input type="checkbox">```.
+
+<div id="checkbox-func"></div>
+
+* **```function checkbox(name, text, checked, id)```**
+  - **name** deve ser uma string e seu valor é utilizado como valor da propriedade **name** da tag ```<input type="checkbox">``` criada. 
+  - **text** deve ser uma string. Os seguintes passos são executados: cria-se uma tag ```<span>```; adiciona-se o valor do parâmetro como conteúdo da tag ```<span>``` criada; criate-se a tag ```<input type="checkbox">```; cria-se uma tag ```<label>```; adiciona-se as tags ```<input type="checkbox">```e ```<span>``` (nessa ordem) como conteúdos da tag ```<label>```.
+  - **checked** deve ser um booleano e seu valor é utilizado como valor da propriedade **checked** da tag ```<input type="checkbox">``` criada. Pode ser omitida ou passada como **null**.
+  - **id** deve ser uma string e seu valor é utilizado como valor da propriedade **id** da tag ```<input type="checkbox">``` e como valor da propriedade **for** da tag ```<label>``` criada. Pode ser omitda, e nesse caso o valor da propriedade **name** é usado em seu lugar. 
+
+Os objetos criados por essa função somente serão utilizados para a passagem do parâmetro **options** da função anterior. Esse objeto também pode ser substituído por um array que deve conter no mínimo três e no máximo quatro valores, que devem obedecer as mesmas regras dos parâmetros da função (com relação a ordem, tipo e obrigatoriedade). 
