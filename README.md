@@ -301,4 +301,18 @@ O framework também disponibiliza uma função que retorna um objeto para a cria
 
 ### ```function menu(items) ou mn(items)```
 
-A função 
+A função ```mn``` é uma maneira mais prática de se criar o bojeto que presenta o menu, mas sua implementação é exatamente a mesma da função ```menu```.
+
+* **items** pode ser um objeto ou um array de objetos do tipo item de menu. 
+
+### ```function menuItem(text, link, icon, subitems) ou mi(text, link, icon, subitems)
+
+A função ```mi``` é uma maneira mais prática de se criar o objeto que representa um item de menu, mas sua impelmentação é exatamente a mesma da função ```menuItem```. 
+
+* **text** deve ser uma string e seu valor é utilizado como nome da exibido para a opção de menu correspondente.
+
+* **link** deve ser uma string e seu valor para redirecionar o usuário para o local desejado quando a opção correspondente for selecionada.
+
+* **icon** deve ser uma string e é usado para adicionar um ícone ao lado do nome da opção de menu correspondente. Pode ser omitido ou passado como **null**.
+
+* **subitems** deve ser uma lista de objetos do tipo item de menu que serão utilizados como sub opções da opção de menu correspondente. 
