@@ -46,6 +46,7 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
 5. [Menu](#menu)
    - [function menu(items) ou mn(items)](#function-menuitems-ou-mnitems)
    - [function menuItem(text, link, icon, subitems) ou mi(text, link, icon, subitems)](#function-menuitemtext-link-icon-subitems-ou-mitext-link-icon-subitems)
+6. [Acessbilidade](acessibilidade)
 
 ## Como usar? 
 
@@ -300,7 +301,9 @@ Os objetos criados por essa função somente serão utilizados para a passagem d
 
 ## Menu
 
-O framework também disponibiliza uma função que retorna um objeto para a criação de um menu de navegação. 
+O framework também disponibiliza uma função que retorna um objeto para a criação de um menu de navegação.
+
+Esse componente possui ajuste automático de layout quando sendo utilizado em telas menores que 800 pixels. O layout assumido para esse tamnho é colocar as opções de menu uma em baixo da outra. Também é criado um botão no topo do menu que permite mostrar e esconder as opções. 
 
 ### ```function menu(items) ou mn(items)```
 
@@ -321,3 +324,10 @@ A função ```mi``` é uma maneira mais prática de se criar o objeto que repres
 * **subitems** deve ser uma lista de objetos do tipo item de menu que serão utilizados como sub opções da opção de menu correspondente. 
 
 Para ver a estrutura das tags criadas execute o exemplo presente no repositório. 
+
+## Acessibilidade 
+
+O presente framework foi desenvolvido pensando em disponnibilizar páginas web acessiveis para usuário que fazem a navegação através do teclado ou por leitores de tela. Pensando nisso, há duas características podem ser observadas: 
+
+    1. As tags semânticas do HTML5 são utilizadas sempre que possível, sendo raro a utilização da tag ```<div>```. 
+    2. O componente ```menu``` possui acessibilidade para navegação com uso de teclado de acordo com especícações do padrão WAI-ARIA criado pela WWDC. Além disso, o mesmo componente também faz utilização de outras propriedade do WAI-ARIA, como por exemplo a propriedade ```expanded``` que possibilita para os leitores de tela identificar se uma opção que possui sub items está exibindo as sub opções disponíveis (o que signficaria dizer para um usuário que não utiliza o leitor de tela que o menu está aberto ou fechado). 
