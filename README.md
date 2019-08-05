@@ -16,6 +16,24 @@ Framework JavaScript para criação de páginas web responsivas com acessibilida
    - [\<hgroup\>](#hgroup-func)
    - [\<abbr\>](#abbr-func)
    - [\<acronym\>](#acronym-func)
+   - [\<ul\>](#ul-func)
+   - [\<ol\>](#ol-func)
+   - [\<li\>](#li-func)
+   - [\<figure\>](#figure-func)
+   - [\<img\>](#img-func)
+   - [\<figcaption\>](#figcaption-func)
+   - [\<br\>](#breakline-func)
+   - [\<section\>](#section-func)
+   - [\<article\>](#article-func)
+   - [\<nav\>](#nav-func)
+   - [\<aside\>](#-func)
+   - [\<form\>](#form-func)
+   - [\<input\>](#input-func)
+   - [iput submit](#submit-func)
+   - [input reset](#reset-func)
+   - [\<button\>](#button-func)
+   <!-- - [\<\>](#-func)
+   - [\<\>](#-func) -->
 4. [Os casos select, checkbox e radio](#os-casos-select-checkbox-e-radio)
 
 ## Como usar? 
@@ -110,47 +128,73 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
   - **text** deve ser uma string e será inserido como conteúdo da tag ```<acronym>``` criada. 
   - **title** deve ser uma string e seru valor será utilizado como valor da propriedade **title** da tag ```<acronym>``` cirada. 
 
+<div id="ul-func"></div>
+
 * **```function ul(content)```**
   - **content** pode ser uma string, um dos objetos que representam as tags ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```,```<img>```,  ```<figure>```, ```<li>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriormente). Os textos e tags criada (se for o caso) são inseridos como conteúdo de uma tag ```<li>```, que por sua vez é inserida como ocnteúdo da tag ```<ul>``` criada. 
 
+<div id="ol-func"></div>
+
 * **```function ol(content)```**
   - **content** pode ser uma string, um dos objetos que representam as tags ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```,```<img>```,  ```<figure>```, ```<li>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriormente). Os textos e tags criada (se for o caso) são inseridos como conteúdo de uma tag ```<li>```, que por sua vez é inserida como ocnteúdo da tag ```<ol>``` criada. 
+
+<div id="li-func"></div>
 
 * **```function li(content, subcontent)```**
   - **content** pode ser uma string, um dos objetos que representam as tags ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```,```<img>```,  ```<figure>```, ou um array contendo strings e objetos (os que representam as tags suportadas de forma aninhada apresentados anteriormente). Os textos e tagas criadas (se for o caso) são inseridos como conteúdo das tag ```<li>``` criada. Pode ser passado como **null** caso o valor do segundo parâmetro seja específicado. 
   - **subcontent** deve ser um dos objetos que representam as tags ```<ul>```, ```<ol>```. Utilizado para criar listas encadeadas. A tag criada é inserida como conteúdo da tag ```<li>```criada. Pode ser omitido caso não se queira criar uma lista encadeada. 
 
+<div id="figure-func"></div>
+
 * **```function figure(img, caption)```**
   - **img** deve ser um objeto que representa a tag ```<img>```. A tag criada é inserida como conteúdo da tag ```<figure>``` criada. 
   - **caption** pode ser uma string ou um objeto que representa a tag ```<figcaption>```. Em caso de ser uma string, seu valor é inserido como conteúdo de uma tag ```<figcaption>```, que por sua vez é inserida como conteúdo da tag ```<figure>``` criada. Em caso de ser um objeto, a tag ```<figcaption>``` criada é inserida como conteúdo da tag ```<figure>``` criada. Pode ser omitido. 
+
+<div id="img-func"></div>
 
 * **```function img(src, alt)```**
   - **src** deve ser uma string e seu valor é utilizado como valor da propriedade **src** da tag ```<img>``` criada. 
   - **alt** deve ser uma string e seu valor é utilizado como valor da propriedade **alt** da tag ```<img>``` criada. 
 
+<div id="figcaption-func"></div>
+
 * **```function figcaption(text)```**
   - **text** deve ser uma string e seu valor inserido com conteúdo da tag ```<figcaption>``` criada. 
+
+<div id="breakline-func"></div>
 
 * **```function breakline()```**
   - Essa função não recebe argumento e retorno um bojeto que representa a tag ```<br>```. Também existe uma variável global no framework chamada **br** que já armazena um bojeto desse tipo. 
 
+<div id="section-func"></div>
+
 * **```function section(content)```**
   - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<br>```, ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```, ```<ul>```,  ```<ol>```, ```<figure>```, ```<img>```, ```<article>```, ```<nav>```, ```<aside>```, ```<form>```, ```<button>```. As tags criadas são inseridas como conteúdo da tag ```<section>```. 
+
+<div id="article-func"></div>
 
 * **```function article(content)```**
   - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<br>```, ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```, ```<ul>```,  ```<ol>```, ```<figure>```, ```<img>```, ```<article>```, ```<nav>```, ```<aside>```, ```<form>```, ```<button>```. As tags criadas são inseridas como conteúdo da tag ```<article>``` criada. 
 
+<div id="nav-func"></div>
+
 * **```function nav(content)```**
   - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<br>```, ```<a>```, ```<ul>```, ```<ol>```. As tags criadas são inseridas como conteúdo como conteúdo da tag ```<nav>``` criada. 
 
+<div id="aside-func"></div>
+
 * **```function aside(content)```**
   - **content** pode ser um objeto ou uma lista de objetos que representam as tags ```<br>```, ```<a>```, ```<ul>```, ```<ol>```. As tags criadas são inseridas como conteúdo como conteúdo da tag ```<aside>``` criada.  
+
+<div id="form-func"></div>
 
 * **```function form(action, method, inputs, enctype)```**
   - **action** deve ser uma string e seu valor é utilizado como valor da propriedade **action** da tag ```<form>``` criada.
   - **method** deve ser uma string e seu valor é utilizado como valor da propriedade **method** da tag ```<form>``` criada.
   - **inputs** deve ser um array de objetos que podem ser dos tipos que repesentam as tags ```<br>```, ```<p>```, ```<a>```, ```<h>```, ```<hgroup>```, ```<ul>```,  ```<ol>```, ```<figure>```, ```<img>```, ```<input>```, ```<select>```, ```<button>```. As tags criadas são inseridas como conteúdo da tag ```<form>``` criada. 
   - ***enctype** deve ser uma string e seu valor é utilizado como valor da propriedade **enctype** da tag ```<form>``` criada. Pode ser omitido. 
+
+<div id="input-func"></div>
 
 * **```function input(type, name, label, placeholder, required)```**
   - **type** deve ser uma string e seu valor é utilizado como valor da propriedade **type** da tag ```<input>``` criada. O framework disponibiliza as váriaveis globais ```_text```, ```_number```, ```_tel```, ```_email```, ```_date```, ```_password```, ```_file```, que podem ser utilizadas como valores. 
@@ -169,11 +213,17 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
    Elas servem para simplificar a criação desse tipos de input e funcionam exatamente como a função **```function input(type, name, label, placeholder, required)```**, somente não é necessário passar o parâmetro **type**. 
 
+<div id="submit-func"></div>
+
 * **```function submit(text)```**
   - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="submit">``` criada. Pode ser omitido. Seu valor padrão é **"Submit"**.
 
+<div id="reset-func"></div>
+
 * **```function reset(text)```**
   - **text** deve ser uma string e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="reset">``` criada. Pode ser omitido. Seu valor padrão é **"Reset"**.
+
+<div id="button-func"></div>
 
 * **```button(text, onclick)```**
   - **text** deve ser uma string e seu valor é inserido como conteúdo da tag ```<button>``` criada.
