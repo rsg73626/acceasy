@@ -273,3 +273,21 @@ Os objetos criados por essa função somente serão utilizados para a passagem d
   - **id** deve ser uma string e seu valor é utilizado como valor da propriedade **id** da tag ```<input type="checkbox">``` e como valor da propriedade **for** da tag ```<label>``` criada. Pode ser omitda, e nesse caso o valor da propriedade **name** é usado em seu lugar. 
 
 Os objetos criados por essa função somente serão utilizados para a passagem do parâmetro **options** da função anterior. Esse objeto também pode ser substituído por um array que deve conter no mínimo três e no máximo quatro valores, que devem obedecer as mesmas regras dos parâmetros da função (com relação a ordem, tipo e obrigatoriedade). 
+
+### Radio
+
+<div id="radioGroup-func"></div>
+
+* **```function radioGroup(name, options)```**
+  - **name** deve ser uma string e seu valor é utilizado como valor da propriedade **name** das tags ```<input type="radio">``` criadas. 
+  - **options** pode ser um objeto ou uma lista de objetos do tipo que representa a tag ```<input type="radio">```.
+
+<div id="radio-func"></div>
+
+* **```function radio(text, value, id, checked)```** 
+  - **text** deve ser uma string. Os seguintes passos são executados: cria-se uma tag ```<span>```; adiciona-se o valor do parâmetro como conteúdo da tag ```<span>``` criada; criate-se a tag ```<input type="radio">```; cria-se uma tag ```<label>```; adiciona-se as tags ```<input type="radio">```e ```<span>``` (nessa ordem) como conteúdos da tag ```<label>```.
+  - **value** pode ser uma string ou número e seu valor é utilizado como valor da propriedade **value** da tag ```<input type="radio">``` criada.
+  - **id** deve ser uma string e seu valor é utilizado como valor da propriedade **id** da tag ```<input type="radio">``` e como valor da propriedade **for** da tag ```<label>``` criada.
+  - **checked** deve ser um booleano e seu valor é utilizado como valor da propriedade **checked** da tag ```<input type="checkbox">``` criada. Pode ser omitida ou passada como **null**.
+
+Os objetos criados por essa função somente serão utilizados para a passagem do parâmetro **options** da função anterior. Esse objeto também pode ser substituído por um array que deve conter no mínimo três e no máximo quatro valores, que devem obedecer as mesmas regras dos parâmetros da função (com relação a ordem, tipo e obrigatoriedade). 
