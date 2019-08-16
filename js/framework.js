@@ -417,7 +417,7 @@ function _addFormComplements(tag, object) {
     _addFormGrid(tag, object)
 
     // INPUT LABEL ALIGNMENT
-    var labelAlignment = object.label_alignment
+    var labelAlignment = object.label_alignment 
     if (labelAlignment != up && labelAlignment != left) { labelAlignment = up }
     addGlobalStyles([ style('display', 'flex'),
                       style('flex-direction', labelAlignment == up ? column : row),
@@ -482,16 +482,16 @@ function _tagForObjectWithTypes(object, types) {
 
     const content = type != _menu_ ? object.content : object
     if (typeof object.button_size != _UNDEFINED) { content.button_size = object.button_size } else { content.button_size = button_small }
-    if (typeof object.label_alignment != _UNDEFINED) { content.label_alignment = object.label_alignment } else { content.label_alignment = left }
+    // if (typeof object.label_alignment != _UNDEFINED) { content.label_alignment = object.label_alignment } else { content.label_alignment = left }
     if (typeof object.input_size != _UNDEFINED) { content.input_size = object.input_size } else { content.input_size = input_small }
     if (typeof object.container != _UNDEFINED) { content.container = object.container != null ? object.container : true } else { content.container = true }
     if (typeof object.container_alignment != _UNDEFINED) { content.container_alignment = object.container_alignment != null ? object.container_alignment : line } else {content.container_alignment = line }
     if (typeof object.option_size != _UNDEFINED) { content.option_size = object.option_size } else { content.option_size = option_small }
 
     var tag = _tagWithTypeInTypesForObject(type, types, content)
-    if (type == _form_) { _addFormComplements(tag, object) }
     _addIdAndClassToTag(tag, object)
     _addOtherPropertiesToTag(tag, object)
+    if (type == _form_) { _addFormComplements(tag, object) }
 
     return tag
 }
@@ -1359,7 +1359,7 @@ function _input(content) {
                 labelTag.append(spanTag)
                 labelTag.append(input)
                 labelTag.addClass('input-label')
-                if (labelAlignment == up || labelAlignment == left) {
+                if (labelAlignment == up || labelAlignment == left) { 
                     $(labelTag).css('display', 'flex') 
                     $(labelTag).css('flex-direction', labelAlignment == up ? column : row) 
                     $(labelTag).css('justify-content', 'flex-start')
