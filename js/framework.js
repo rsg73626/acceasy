@@ -60,6 +60,10 @@ const _select_ = 24
 
 const _menu_ = 25
 
+/* Generic */
+
+const _tag_ = 26
+
 /* Input types */
 
 const _text = 'text'
@@ -150,7 +154,7 @@ function _setGlobalVariables() {
         _figure, _img, _figcaption, 
         _br, _section, _article, _nav, _aside, 
         _form, _input, _checkbox, _radio, _button, _select, 
-        _mn
+        _mn, _tag
     ]
     $('head').append(_globalStyleVariables)
     $('head').append(_globalStyle)
@@ -497,7 +501,7 @@ function _tagForObjectWithTypes(object, types) {
 }
 
 function _tagForObject(object) {
-    const types = [_br_, _menu_, _p_, _i_, _span_, _abbr_, _acronym_, _a_, _h_, _hgroup_, _ul_, _ol_, _figure_, _img_, _section_, _nav_, _aside_, _form_, _button_]
+    const types = [_br_, _menu_, _p_, _i_, _span_, _abbr_, _acronym_, _a_, _h_, _hgroup_, _ul_, _ol_, _figure_, _img_, _section_, _nav_, _aside_, _form_, _button_, _tag_]
     return _tagForObjectWithTypes(object, types)
 }
 
@@ -642,6 +646,46 @@ function menuColors(content) {
 }
 
 /* - - - - - - - - - - HTML builder functions - - - - - - - - - - */
+
+/* Generic */
+
+function tag(name, content) {
+    if (isString(name)) {
+        var tagContent = { name: name }
+        if (isString(content) || isNumber(content) || isObject(content) || !isEmpty(content)) {
+            tagContent.content = content
+        }
+        return {
+            type: _tag_,
+            content: tagContent
+        }
+    }
+    return null
+}
+
+function _tag(content) {
+    var tagName = content.name
+    if (isString(tagName) && tagName.replace(/\s/g,'').replace('<','').replace('>','') != '') {
+        tagName = '<' + tagName.replace(/\s/g,'').replace('<','').replace('>','') + '>'
+        var createdTag = $(tagName)
+        const tagContent = content.content
+        if (isString(tagContent) || isNumber(tagContent)) { 
+            createdTag.append(tagContent)
+        } else if (!isEmpty(tagContent)) {
+            tagContent.forEach(function(object, index, array) {
+                if (isString(object) || isNumber(object)) {
+                    createdTag.append(object)
+                } else { 
+                    createdTag.append(_tagForObject(object))
+                }
+            })
+        } else if (isObject(tagContent)) {
+            createdTag.append(_tagForObject(tagContent))
+        }
+        return createdTag
+    } 
+    return null
+}
 
 /* Text component types */
 
