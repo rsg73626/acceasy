@@ -1,5 +1,7 @@
 
 function getMainObjects() { 
+
+    /* REGISTER FORM */
     
     const registerTitle = h('Register <form>')
     const name = textInput('name', 'Name: ', 'enter your name', true)
@@ -18,12 +20,46 @@ function getMainObjects() {
         0, 1, 2, 3, [4, 5], [6, 7]
     ]
 
-    const menuFormTitle = h('Menu <form>')
-    
-    const menuFormInputs = [menuFormTitle]
+    /* FORM WITH RADIOS AND CHECKBOXES */
 
-    const menuForm = form('#', 'POST', menuFormInputs)
+    const transportMediums = checkboxGroup([ ['train', 'Train'], 
+                                             ['bus', 'Bus'], 
+                                             ['subway', 'Subway'], 
+                                             ['bike', 'Bike'] ],  
+                                            'Which of these do you use? ')
+    transportMediums.container_alignment = line
+    transportMediums.style = 'display: flex; flex-direction: row;'
 
-    return [registerForm, menuForm]
+    const ratingOptions = [ ['1', '1', 'r1', false],
+                            ['2', '2', 'r2', false],
+                            ['3', '3', 'r3', false],
+                            ['4', '4', 'r4', false],
+                            ['5', '5', 'r5', false] ]
+
+    const trainRating = radioGroup('train-rating', ratingOptions, 'Train')
+    trainRating.container_alignment = column
+
+    const busRating = radioGroup('bus-rating', ratingOptions, 'Bus')
+    busRating.container_alignment = column
+
+    const subwayRating = radioGroup('subway-rating', ratingOptions, 'Subway')
+    subwayRating.container_alignment = column
+
+    const bikeRating = radioGroup('bike-rating', ratingOptions, 'Bike')
+    bikeRating.container_alignment = column
+
+    const transportRatingForm = form('#', 'POST', [
+        h('Public Transport Rating'),
+        transportMediums,
+        h('Avaliate the quality of each one', 5),
+        trainRating, busRating, subwayRating, bikeRating
+    ])
+
+    transportRatingForm.grid = [
+        0, 1, 2, [3, 4, 5, 6]
+    ]
+
+
+    return [registerForm, transportRatingForm]
 
 }

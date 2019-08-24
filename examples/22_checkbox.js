@@ -9,7 +9,7 @@ function getMainObjects() {
     const selectedOptionWithArray = ['checkbox-option-5-name', 'Option 5', true]
     const optionWithIdWithArray = ['checkbox-option-6-name', 'Option 6', false, 'checkbox-option-id']
 
-    const checkbox1 = checkboxGroup(simpleOption)
+    const checkbox1 = checkboxGroup(simpleOption, 'Checkbox 1') 
     const checkbox2 = checkboxGroup([simpleOption, selectedOption, optionWithId, 
                                      simpleOptionWithArray, selectedOptionWithArray, optionWithIdWithArray])
 
