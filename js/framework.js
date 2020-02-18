@@ -1440,7 +1440,7 @@ function _input(content) {
     }
 } 
 
-function checkboxGroup(options) {
+function checkboxGroup(options, label) {
     var optionObjects = []
     let opts = isArray(options) ? options : isObject(options) ? [options] : []
     if (!isEmpty(opts)) {
@@ -1458,7 +1458,10 @@ function checkboxGroup(options) {
     }
     var checkboxGroupObject = {
         type: _checkbox_,
-        content: optionObjects
+        content: {
+            options: optionObjects,
+            label: label
+        }
     }
     return checkboxGroupObject
 }
@@ -1476,12 +1479,20 @@ function checkbox(name, text, checked, id) {
 }
 
 function _checkbox(content) { 
-    if (!isEmpty(content)) {
+    const options = content.options
+    const label = content.label
+
+    if (!isEmpty(options)) {
         const useContainer = content.container
         var checkboxTags = []
-        var container = $('<div>')
+        var container = $('<fieldset>')
         var containerAlignment = content.container_alignment
-        content.forEach(function(object, index, array){
+        if (isString(label)) {
+            var legend = $('<legend>')
+            legend.text(label)
+            container.append(legend)
+        }
+        options.forEach(function(object, index, array){
             const name = object.name
             const text = object.text
             const checked = (object.checked == true)
@@ -1536,7 +1547,7 @@ function _checkbox(content) {
     }
 } 
 
-function radioGroup(name, options) {
+function radioGroup(name, options, label) {
     var optionObjects = []
     let opts = isArray(options) ? options : isObject(options) ? [options] : []
     if (isString(name) && !isEmpty(opts)) {
@@ -1556,7 +1567,8 @@ function radioGroup(name, options) {
         type: _radio_,
         content: {
             name: name,
-            options: optionObjects
+            options: optionObjects,
+            label: label
         }
     }
     return radioGroupObject
@@ -1576,10 +1588,16 @@ function _radio(content) {
     const options = content.options
     const useContainer = content.container
     const containerAlignment = content.container_alignment
+    const label = content.label
     if ((name != null && isString(name)) && 
         !isEmpty(options)) {
         var radioTags = []
-        var container = $('<div>')
+        var container = $('<fieldset>')
+        if (isString(label)) {
+            var legend = $('<legend>')
+            legend.text(label)
+            container.append(legend)
+        }
         options.forEach(function(object, index, array){
             const text = object.text
             const id = object.id

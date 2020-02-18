@@ -8,7 +8,7 @@ function getMainObjects() {
     const selectedRadioWithArray = ['Radio 2', 'value-2', 'radio-2-id', true]
 
     const radio1 = radioGroup('radio-group-1-name', simpleRadio)
-    const radio2 = radioGroup('radio-group-2-name', [simpleRadio, selectedRadio, simpleRadioWithArray, selectedRadioWithArray])
+    const radio2 = radioGroup('radio-group-2-name', [simpleRadio, selectedRadio, simpleRadioWithArray, selectedRadioWithArray], 'Radio label')
 
     const radio3 = radioGroup('radio-group-3-name', [simpleRadio, selectedRadio])
     radio3.container = false
