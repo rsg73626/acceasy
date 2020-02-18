@@ -28,7 +28,7 @@ function getMainObjects() {
                                              ['bike', 'Bike'] ],  
                                             'Which of these do you use? ')
     transportMediums.container_alignment = line
-    transportMediums.style = 'display: flex; flex-direction: row;'
+    transportMediums.style = 'display: flex; flex-direction: row;' //;transportMediums.container = false
 
     const ratingOptions = [ ['1', '1', 'r1', false],
                             ['2', '2', 'r2', false],
@@ -37,7 +37,7 @@ function getMainObjects() {
                             ['5', '5', 'r5', false] ]
 
     const trainRating = radioGroup('train-rating', ratingOptions, 'Train')
-    trainRating.container_alignment = column
+    trainRating.container_alignment = column //;trainRating.container = false
 
     const busRating = radioGroup('bus-rating', ratingOptions, 'Bus')
     busRating.container_alignment = column
@@ -57,6 +57,7 @@ function getMainObjects() {
 
     transportRatingForm.grid = [
         0, 1, 2, [3, 4, 5, 6]
+        // 0, [1, 2, 3, 4], 5, [6, 7, 8, 9]
     ]
 
 

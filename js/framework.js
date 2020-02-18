@@ -1479,15 +1479,6 @@ function checkbox(name, text, checked, id) {
 }
 
 function _checkbox(content) { 
-
-    function createCheckboxItem() {
-
-    }
-
-    function createCheckboxList() {
-
-    }
-
     const options = content.options
     const label = content.label
 
