@@ -1,4 +1,4 @@
-# Framework Frontend Responsivo Acessivel
+# Acceasy
 
 Framework JavaScript para criação de páginas web responsivas com acessibilidade para deficientes visuais.
 
