@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title> Register </title>
+    </head>
+
+    <body>
+
+        <header>
+            <h1> Register </h1>
+        </header>
+
+        <form action="../end.html" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend> Personal </legend>
+
+                <label for="firstname"> First Name: </label>
+                <input id="firstname" name="firstname" type="text" placeholder="Enter your name." required="required"/>
+                <br/>
+
+                <label for="lastname"> Last name: </label>
+                <input id="lastname" name="lastname" type="text" placeholder="Enter your last name." required="required"/>
+                <br/>
+
+                <label for="birthdate"> Birth date: </label>
+                <input id="birthdate" name="birthdate" type="date" placeholder="Enter your birth date." required="required"/>
+                <br/>
+                
+                <label for="id"> ID: </label>
+                <input id="id" name="id" type="text" placeholder="Enter your ID." required="required"/>
+                <br/>
+
+                <label for="photo"> Photo: </label>
+                <input id="photo" name="photo" type="file" placeholder="Select your photo." required="required"/>
+                <br/>
+
+                <label for="country"> Country </label>
+                <select id="country" name="country" laceholder="Select your country." required="required">
+                    <option> Country A </option>
+                    <option> Country B </option>
+                    <option> Country C </option>
+                </select>
+
+                <h5>Sexo</h5>
+                <input type="radio" id="contactChoice1" name="sex" value="fem" checked="checked"/>
+                <label for="contactChoice1">Feminino</label>
+
+                <input type="radio" id="contactChoice2" name="sex" value="masc"/>
+                <label for="contactChoice2">Masculino</label>
+                <br/>
+            </fieldset>
+
+            <fieldset>
+                <legend> Account </legend>
+
+                <label for="email"> E-mail: </label>
+                <input id="email" name="email" type="email" placeholder="Enter your e-mail." required="required"/>
+                <br/>
+                
+                <label for="password"> Password: </label>
+                <input id="password" name="password" type="password" placeholder="Enter your password." required="required"/>
+                <br/>
+
+                <label for="confirm_password"> Confirm password: </label>
+                <input id="confirm_password" name="confirm_password" type="password" placeholder="Enter your password." required="required"/>
+                <br/>
+            </fieldset>
+
+            <input type="submit" value="Register"/>
+
+        </form>
+
+    </body>
+
+</html>

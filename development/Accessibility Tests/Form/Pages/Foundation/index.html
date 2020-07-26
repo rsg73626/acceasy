@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Starter Template</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+  </head>
+  <body>
+
+    <header>
+        <h1> Register </h1>
+    </header>
+
+    <form action="end.html" enctype="multipart/form-data">
+
+        <fieldset class="fieldset">
+            <legend> Personal </legend>
+
+            <label for="firstname"> First Name: 
+                <input id="firstname" name="firstname" type="text" placeholder="Enter your name." required="required"/>
+            </label>
+
+            <label for="lastname"> Last name: 
+                <input id="lastname" name="lastname" type="text" placeholder="Enter your last name." required="required"/>
+            </label>
+
+            <label for="birthdate"> Birth date: 
+                <input id="birthdate" name="birthdate" type="date" placeholder="Enter your birth date." required="required"/>
+            </label>
+            
+            <label for="id"> ID: 
+                <input id="id" name="id" type="text" placeholder="Enter your ID." required="required"/>
+            </label>
+
+            <label class="button", for="photo"> Photo: </label>
+            <input id="photo" class="show-for-sr" name="photo" type="file" placeholder="Select your photo." required="required"/>
+
+            <label for="country"> Country 
+                <select id="country" name="country" laceholder="Select your country." required="required">
+                    <option> Country A </option>
+                    <option> Country B </option>
+                    <option> Country C </option>
+                </select>
+            </label>
+
+            <h5>Sexo</h5>
+            <input type="radio" id="contactChoice1" name="sex" value="fem" checked="checked"/> <label for="contactChoice1">Feminino</label>
+
+            <input type="radio" id="contactChoice2" name="sex" value="masc"/> <label for="contactChoice2">Masculino</label>
+            <br/>
+        </fieldset>
+
+        <fieldset class="fieldset">
+            <legend> Account </legend>
+
+            <label for="email"> E-mail: 
+                <input id="email" name="email" type="email" placeholder="Enter your e-mail." required="required"/>
+            </label>
+            
+            <label for="password"> Password: 
+                <input id="password" name="password" type="password" placeholder="Enter your password." required="required"/>
+            </label>
+
+            <label for="confirm_password"> Confirm password: 
+                <input id="confirm_password" name="confirm_password" type="password" placeholder="Enter your password." required="required"/>
+            </label>
+        </fieldset>
+
+        <input class="button" type="submit" value="Register"/>
+
+    </form>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Page Title -->
+    <title> Turretcss Test </title>
+
+    <!-- turretcss CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bigfishtv-turret/4.0.0/turret.min.css" crossorigin="anonymous">
+
+    </head>
+
+        <header>
+            <h1> Register </h1>
+        </header>
+
+        <form action="../end.html" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend> Personal </legend>
+
+                <label for="firstname"> First Name: </label>
+                <input id="firstname" name="firstname" type="text" placeholder="Enter your name." required="required"/>
+
+                <label for="lastname"> Last name: </label>
+                <input id="lastname" name="lastname" type="text" placeholder="Enter your last name." required="required"/>
+
+                <label for="birthdate"> Birth date: </label>
+                <input id="birthdate" name="birthdate" type="date" placeholder="Enter your birth date." required="required"/>
+                
+                <label for="id"> ID: </label>
+                <input id="id" name="id" type="text" placeholder="Enter your ID." required="required"/>
+
+                <label for="photo"> Photo: </label>
+                <input id="photo" name="photo" type="file" placeholder="Select your photo." required="required"/>
+
+                <label class="select" for="country">
+                    <select id="country" name="country" laceholder="Select your country." required="required">
+                        <option> Country A </option>
+                        <option> Country B </option>
+                        <option> Country C </option>
+                    </select>
+                </label>
+
+                <h5>Sexo</h5>
+                <label class="control radio">
+                    <input type="radio" id="contactChoice1" name="sex" value="fem" checked="checked"/>
+                    <span class="control-indicator"></span>
+                    <span class="control-label">Feminino</span>
+                </label>
+
+                <label class="control radio">
+                    <input type="radio" id="contactChoice2" name="sex" value="masc"/>
+                    <span class="control-indicator"></span>
+                    <span class="control-label">Masculino</span>
+                </label>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend> Account </legend>
+
+                <label for="email"> E-mail: </label>
+                <input id="email" name="email" type="email" placeholder="Enter your e-mail." required="required"/>
+                <br/>
+                
+                <label for="password"> Password: </label>
+                <input id="password" name="password" type="password" placeholder="Enter your password." required="required"/>
+                <br/>
+
+                <label for="confirm_password"> Confirm password: </label>
+                <input id="confirm_password" name="confirm_password" type="password" placeholder="Enter your password." required="required"/>
+                <br/>
+            </fieldset>
+
+            <input type="submit" value="Register"/>
+            
+        </form>
+
+    </body>
+</html>

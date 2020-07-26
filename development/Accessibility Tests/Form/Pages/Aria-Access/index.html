@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+    <head>
+        <title>Teste de Plugin Acessível</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" src="js/plugin.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+
+        <style type="text/css">
+            table, th, td {
+                border-collapse:collapse;
+                border: solid 1px #ccc;
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            th {
+                background: #0f4871;
+                color: #fff;
+            }
+
+            tr:nth-child(2n) {
+                background: #f1f1f1;
+            }
+            td:hover {
+                color: #fff;
+                background: #CA293E;
+            }
+            td:focus {
+                background: #f44;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1 class="acessivel"> Register </h1>
+        </header>
+
+        <form class="form-acessivel" action="../end.html" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend class="acessivel"> Personal </legend>
+
+                <label for="firstname"> First Name: </label>
+                <input id="firstname" name="firstname" type="text" placeholder="Enter your name." required="required"/>
+                <br/>
+
+                <label for="lastname"> Last name: </label>
+                <input id="lastname" name="lastname" type="text" placeholder="Enter your last name." required="required"/>
+                <br/>
+
+                <label for="birthdate"> Birth date: </label>
+                <input id="birthdate" name="birthdate" type="date" placeholder="Enter your birth date." required="required"/>
+                <br/>
+                
+                <label for="id"> ID: </label>
+                <input id="id" name="id" type="text" placeholder="Enter your ID." required="required"/>
+                <br/>
+
+                <label for="photo"> Photo: </label>
+                <input id="photo" name="photo" type="file" placeholder="Select your photo." required="required"/>
+                <br/>
+
+                <label for="country"> Country </label>
+                <select id="country" name="country" laceholder="Select your country." required="required">
+                    <option> Country A </option>
+                    <option> Country B </option>
+                    <option> Country C </option>
+                </select>
+
+                <h5>Sexo</h5>
+                <input type="radio" id="contactChoice1" name="sex" value="fem" checked="checked"/>
+                <label for="contactChoice1">Feminino</label>
+
+                <input type="radio" id="contactChoice2" name="sex" value="masc"/>
+                <label for="contactChoice2">Masculino</label>
+                <br/>
+            </fieldset>
+
+            <fieldset>
+                <legend class="acessivel"> Account </legend>
+
+                <label for="email"> E-mail: </label>
+                <input id="email" name="email" type="text" placeholder="Enter your e-mail." required="required"/>
+                <br/>
+                
+                <label for="password"> Password: </label>
+                <input id="password" name="password" type="password" placeholder="Enter your password." required="required"/>
+                <br/>
+
+                <label for="confirm_password"> Confirm password: </label>
+                <input id="confirm_password" name="confirm_password" type="password" placeholder="Enter your password." required="required"/>
+                <br/>
+            </fieldset>
+
+            <input type="submit" value="Register"/>
+        </form>
+        
+    </body>
+
+</html>
