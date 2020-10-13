@@ -248,9 +248,10 @@ function isBoolean(content) {
 
 
 function _addIdAndClassToTag(tag, content) {
+    
     if (tag != null && content != null) {
         const id = content.id
-        const classes = content.class
+        const classes = content['class']
         if (id != null && isString(id)) {
             tag.attr('id', id)
         }
@@ -258,6 +259,7 @@ function _addIdAndClassToTag(tag, content) {
             tag.addClass(classes)
         }
     }
+    
 }
 
 function _addOtherPropertiesToTag(tag, content) {
@@ -275,7 +277,9 @@ function _addOtherPropertiesToTag(tag, content) {
             property == 'icon_side' ||
             property == 'suboptions_icon' ||
             property == 'content' ||
-            property == 'type') { continue }
+            property == 'type') {
+            continue
+        }
         const value = content[property]
         if (isString(property)) {
             if (isString(value) || isNumber(value)) {
@@ -485,17 +489,51 @@ function _tagForObjectWithTypes(object, types) {
     const type = object.type
 
     const content = type != _menu_ ? object.content : object
-    if (typeof object.button_size != _UNDEFINED) { content.button_size = object.button_size } else { content.button_size = button_small }
-    // if (typeof object.label_alignment != _UNDEFINED) { content.label_alignment = object.label_alignment } else { content.label_alignment = left }
-    if (typeof object.input_size != _UNDEFINED) { content.input_size = object.input_size } else { content.input_size = input_small }
-    if (typeof object.container != _UNDEFINED) { content.container = object.container != null ? object.container : true } else { content.container = true }
-    if (typeof object.container_alignment != _UNDEFINED) { content.container_alignment = object.container_alignment != null ? object.container_alignment : line } else {content.container_alignment = line }
-    if (typeof object.option_size != _UNDEFINED) { content.option_size = object.option_size } else { content.option_size = option_small }
+    
+    if (typeof object.button_size != _UNDEFINED) {
+        content.button_size = object.button_size
+    } else {
+        content.button_size = button_small
+    }
+    
+    if (typeof object.label_alignment != _UNDEFINED) {
+        content.label_alignment = object.label_alignment
+    } else {
+        content.label_alignment = left
+    }
+    
+    if (typeof object.input_size != _UNDEFINED) {
+        content.input_size = object.input_size
+    } else {
+        content.input_size = input_small
+    }
+    
+    if (typeof object.container != _UNDEFINED) {
+        content.container = object.container != null ? object.container : true
+    } else {
+        content.container = true
+    }
+    
+    if (typeof object.container_alignment != _UNDEFINED) {
+        content.container_alignment = object.container_alignment != null ? object.container_alignment : line
+    } else {
+        content.container_alignment = line
+    }
+    
+    if (typeof object.option_size != _UNDEFINED) {
+        content.option_size = object.option_size
+    } else {
+        content.option_size = option_small
+    }
 
     var tag = _tagWithTypeInTypesForObject(type, types, content)
+    
     _addIdAndClassToTag(tag, object)
     _addOtherPropertiesToTag(tag, object)
-    if (type == _form_) { _addFormComplements(tag, object) }
+    
+    if (type == _form_) {
+        _addFormComplements(tag, object)
+    }
 
     return tag
 }
@@ -537,6 +575,11 @@ function _tagForObjectInsideAside(object) {
 
 function _tagForObjectInsideForm(object) {
     const types = [_br_, _p_, _a_, _h_, _hgroup_, _ul_, _ol_, _figure_, _img_, _input_, _checkbox_, _radio_, _button_, _select_]
+    return _tagForObjectWithTypes(object, types)
+}
+
+function _tagForObjectInsideA(object) {
+    const types = [_img_, _figure_, _p_, _span_]
     return _tagForObjectWithTypes(object, types)
 }
 
@@ -772,12 +815,12 @@ function _span(content) {
     }
 } 
 
-function a(text, link) {
-    if (isString(text) && isString(link)) {
+function a(content, link) {
+    if (isString(link) && (isString(content) || isObject(content) || isArray(content))) {
         return {
             type: _a_,
             content: {
-                text: text,
+                content: content,
                 link: link
             }
         }
@@ -785,18 +828,41 @@ function a(text, link) {
     return null
 }
 
-function _a(content) {
-    const text = content.text
-    const link = content.link
-    if ((text != null && isString(text)) && 
-        (link != null && isString(link))) {
-        var a = $('<a>')
-        a.text(text)
-        a.attr('href', link)
-        return a
-    } else {
+function _a(object) {
+    const link = object.link
+    const content = object.content
+    
+    if (link == null || !isString(link)) {
         return null
     }
+    
+    var a = $('<a>')
+    a.attr('href', link)
+    
+    if (isString(content)) {
+        a.text(content)
+        return a
+    }
+
+    if (!isEmpty(content)) {
+        content.forEach((objc) => {
+            if (isString(objc)) {
+                a.append(objc)
+                return
+            }
+            const tag = _tagForObjectInsideA(objc)
+            a.append(tag)
+        })
+        return a
+    }
+    
+    if (isObject(content)) {
+        const tag = _tagForObjectInsideA(content)
+        a.append(tag)
+        return a
+    }
+    
+    return null
 } 
 
 function h(text, level) {
