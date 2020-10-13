@@ -114,8 +114,8 @@ A seguir serão mostradas as assinaturas das funções auxiliares e uma explica�
 
 <div id="a-func"></div>
 
-* **```function a(text, link)```**
-  - **text** deve ser uma string e será inserido como conteúdo da tag ```<a>```criada. 
+* **```function a(content, link)```**
+  - **content** deve ser uma string ou um array de objetos que podem ser dos tipos que repesentam as tags ```<p>```, ```<span>```, ```<img>```, ```<figure>```. As tags criadas são inseridas como conteúdo da tag ```<a>``` criada. 
   - **link** deve ser uma string e será utilizado como valor da propriedade **href** da tag ```<a>```criada. 
 
 <div id="h-func"></div>
